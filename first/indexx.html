@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>伸缩菜单</title>
+	<script language="javascript" type="text/javascript" src="jquery-1.11.1.min.js"></script>
+	<script language="javascript" type="text/javascript"  >
+        $(document).ready(function (){
+            //找到所有的span，并且点击span以后，控制一下元素div的显示和隐藏
+            $("span").click(function (){
+                $(this).next().toggle("slow");
+            });
+            //初始化时隐藏状态
+            $(".menu").each(function (index,domEle){
+                $(domEle).toggle("1000");
+            });
+        });
+	</script>
+</head>
+
+<body>
+<div>
+	<span>数码产品</span>
+	<div class="menu">
+		<a href="#">照相机</a><br />
+		<a href="#">摄像机</a><br />
+		<a href="#">单反相机</a><br />
+		<a href="#">微单相机</a><br />
+	</div>
+</div>
+
+<div>
+	<span>家用电器</span>
+	<div class="menu">
+		<a href="#">电视</a><br />
+		<a href="#">平板电脑</a><br />
+		<a href="#">冰箱</a><br />
+		<a href="#">微波炉</a><br />
+	</div>
+</div>
+
+<div>
+	<span>衣帽服饰</span>
+	<div class="menu">
+		<a href="#">大衣</a><br />
+		<a href="#">风衣</a><br />
+		<a href="#">羽绒服</a><br />
+		<a href="#">毛衣</a><br />
+	</div>
+</div>
+
+</body>
+</html>

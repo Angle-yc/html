@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>后台页面左侧二级折叠菜单</title>
+    <link href="css/menu.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //初始化时隐藏状态
+            $("ul").each(function (index,domEle){
+                $(domEle).toggle();
+            });
+        });
+
+        function startTo(html){
+            document.getElementById("container").src = html;
+        }
+    </script>
+
+    <style type="text/css">
+        .menu{
+            width: 10%;
+            text-align: left;
+            float: left;
+        }
+        li{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="menu" class="menu">
+    <h3>第一级菜单</h3>
+    <ul>
+        <li><p onclick="startTo('article.html')">二级菜单</p></li>
+        <li><a onclick="startTo('htmlDemo.html')">二级菜单</a></li>
+        <li><a onclick="startTo('index.html')">二级菜单</a></li>
+    </ul>
+    <h3>第二级菜单</h3>
+    <ul>
+        <li><a onclick="startTo('indexx.html')">二级菜单</a></li>
+        <li><a onclick="startTo('menu.html')">二级菜单</a></li>
+        <li><a onclick="startTo('practice.html')">二级菜单</a></li>
+    </ul>
+    <h3>第三级菜单</h3>
+    <ul>
+        <li><a onclick="startTo('sum.html')">二级菜单</a></li>
+        <li><a onclick="startTo('test.html')">二级菜单</a></li>
+    </ul>
+    <h3>第四级菜单</h3>
+    <ul>
+        <li><a onclick="startTo('index.html')">二级菜单</a></li>
+        <li><a onclick="startTo('sum.html')">二级菜单</a></li>
+        <li><a onclick="startTo('article.html')">二级菜单</a></li>
+    </ul>
+</div>
+<iframe id="container" width="70%" height="100%" frameborder="0"></iframe>
+<script type="text/javascript">
+    $(".menu h3").click(function () {
+        $(this).next("ul").slideToggle(300).siblings("ul").slideUp(200);
+        $(this).addClass("haver").siblings().removeClass("haver");
+    });
+</script>
+</body>
+</html>

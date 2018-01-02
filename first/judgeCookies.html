@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cookies检查</title>
+</head>
+<!--刚进入页面的时候就会执行onLoad里面的方法-->
+<body onload="checkCookies()">
+    <script>
+        function checkCookies() {
+            if (navigator.cookieEnabled == true){
+                alert("已启用 Cookies");
+            }else {
+                alert("未启用 Cookies");
+            }
+        }
+    </script>
+<p>提示框会告诉你，浏览器是否已经启用Cookies</p>
+</body>
+</html>

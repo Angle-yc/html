@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello webStorm</title>
+    <script type="text/javascript" src="js/JsDemo.js"></script>
+    <script type="text/javascript" src="js/imgLoad.js"></script>
+    <style type="text/css">
+        body {
+            background-image: url('http://p6.qhimg.com/t0176353db79427f0cf.jpg');
+            background-repeat:no-repeat;
+            background-attachment: inherit;
+        }
+        /**
+        * 首行缩进
+        */
+        p{
+            text-indent: 1cm;
+        }
+        p.small{
+            line-height: 90%;
+        }
+        /**
+        * 行间距，边框
+         */
+        p.big{
+            line-height: 100%;
+            border-style: solid;
+            border-color: #ff0005 #f02321 #00ff54 #00f025;
+        }
+        span.deepskyblue{
+            color: deepskyblue;
+        }
+        /**
+         * <!-- 标题居中显示 -->
+         */
+        h1{
+            text-align: center;
+        }
+        table{
+            table-layout : auto;
+        }
+        td{
+            text-align: center;
+        }
+        td.deepskyblue{
+            background-color: deepskyblue;
+        }
+        td.black{
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <!--所有的跳转都是跳转新页面-->
+    <base target="_blank">
+</head>
+<body>
+<h1 >H5练习使用</h1>
+<p class="big" onclick="compare(12,19)">比较大小加弹窗</p>
+
+<p onclick="confirmOrAlert()" >确定按钮加弹窗</p>
+
+<p onclick="promptResult()">输入框加弹窗</p>
+<p onclick="documentResult()">获取HTML</p>
+<div id="showimg">
+</div>
+<input type="file" id="file_input" name="img" />
+<script type="text/javascript">
+    show()
+</script>
+<ul>
+    <li><p onclick="confirmOrAlert()">信息一</p> </li>
+    <li><p onclick="">信息二</p> </li>
+</ul>
+<ol>
+    <li><p onclick="confirmOrAlert()">信息一</p> </li>
+    <li><p onclick="">信息二</p> </li>
+</ol>
+
+<a href="http://www.baidu.com/" title="这是一个连接"><span class="deepskyblue">跳转至百度</span></a><br>
+
+<p class="big">
+    这个段落拥有更大的行高。<br>
+    这个段落拥有更大的行高。<br>
+    这个段落拥有更大的行高。<br>
+    这个段落拥有更大的行高。<br>
+    这个段落拥有更大的行高。<br>
+    这个段落拥有更大的行高。<br>
+    这个段落拥有更大的行高。<br></p>
+<p class="small">
+    这个段落拥有更小的行高。<br>
+    这个段落拥有更小的行高。<br>
+    这个段落拥有更小的行高。<br>
+    这个段落拥有更小的行高。<br>
+    这个段落拥有更小的行高。<br>
+    这个段落拥有更小的行高。<br>
+    这个段落拥有更小的行高。<br>
+</p>
+<table  border="1" width="100%">
+    <tr>
+        <td class="deepskyblue">窗前明月光</td>
+        <td class="black">疑是地上霜</td>
+        <td class="deepskyblue">举头望明月</td>
+        <td class="black">低头思故乡</td>
+    </tr>
+</table>
+<img src="image/background.jpg" width="145" height="126" alt="Planets" usemap="#planetmap">
+<select name="cars" title="下拉列表">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi" selected>Audi</option>
+</select>
+</body>
+</html>

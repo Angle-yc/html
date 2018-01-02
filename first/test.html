@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+    <script type="text/javascript" src="js/test.js"></script>
+    <script src=""></script>
+    <style>
+        div.q{
+            background-color: deepskyblue;
+            width: 120px;
+            height: 20px;
+            padding: 40px;
+            color: white;
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+<h1 align="center">测试H5页面</h1>
+<audio src="image/temp.mp3" id="play"></audio>
+<div class="q" onmouseover="mOver(this)"
+     onmouseout="mOut(this)"
+     onmousedown="mDown(this)"
+     onmouseup="mUp(this)"
+     onmouseenter="mEnter(this)"
+     onmouseleave="mLeave(this)"
+>把鼠标移到上面</div>
+<div id="div">
+    <p id="p1">第一个段落</p>
+    <p id="p2">第二个段落</p>
+</div>
+<script>
+    playMusic();
+    person("tom",16,"boy");
+    removeChild();
+    document.write("当前页面整个URL："+location.href+"<br>");
+    document.write("主机域名："+location.hostname+"<br>");
+    document.write("端口号："+location.port+"<br>");
+    document.write("当前URL的路径名："+location.pathname+"<br>")
+    function newDoc() {
+        window.location.assign("/javascript/index.html")
+    }
+    window.status = "put footer on your header!"
+</script>
+<input type="button" value="加载新文档" onclick="newDoc()">
+<br>
+<input type="button" value="开始定时：5秒后显示确认框" onclick="timemsg()">
+
+<button class="btn" type="button">我在这</button>
+<script>
+    $(".btn").click(function () {
+
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>小程序</title>
+    <script src="js/practice.js"></script>
+    <script src="js/test.js"></script>
+    <script src="jquery-1.11.1.min.js"></script>
+    <style>
+        form.list{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center"> 判断一个数字是否在 5~10 之间 </h1>
+    <p>请输入 5 到 10 之间的数字</p>
+    <input id="num" type="text" title="input">
+    <button type="button" onclick="testNum()">输入测试值</button>
+    <p id="mess"></p>
+    <input type="button" value="Forward" onclick="goBack()">
+    <form action="" class="list">
+        <fieldset>
+            <legend>Personal information:</legend>
+            name:<input size="24" title="输入姓名"><br><br>
+            E-mail:<input size="24" title="输入邮箱"><br><br>
+            Date or bitth:<input type="date" size="16" title="选择日期">
+        </fieldset>
+    </form>
+<button id="btn" type="button" onclick="onClicks()">点击我</button>
+<script>
+    $(document).ready(function () {
+        $("input").focus(function () {
+            $(this).css("background-color","#ccddee")
+        });
+        $("input").blur(function () {
+            $(this).css("background-color","#ffffff")
+        });
+    })
+</script>
+</body>
+</html>
+
